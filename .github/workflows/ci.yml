@@ -46,8 +46,8 @@ jobs:
           context: .
           push: true
           tags: |
-            rushika247/campusops:latest
-            rushika247/campusops:${{ github.sha }}
+          rushika2007/campusops:latest
+          rushika2007/campusops:${{ github.sha }}
 
       - name: Success Message
         run: echo "CampusOps Docker Image Pushed Successfully!"
