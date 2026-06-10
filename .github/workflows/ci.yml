@@ -61,23 +61,23 @@ jobs:
             rushika2007/campusops:v${{ env.VERSION }}
 
       - name: Create Build Artifact
-  run: |
-    mkdir build
+        run: |
+          mkdir build
 
-    cp app.py build/
-    cp requirements.txt build/
-    cp Dockerfile build/
-    cp VERSION build/
-    cp CHANGELOG.md build/
-    cp README.md build/
+          cp app.py build/
+          cp requirements.txt build/
+          cp Dockerfile build/
+          cp VERSION build/
+          cp CHANGELOG.md build/
+          cp README.md build/
 
-    if [ -d "templates" ]; then
-      cp -r templates build/
-    fi
+          if [ -d "templates" ]; then
+            cp -r templates build/
+          fi
 
-    if [ -d "static" ]; then
-      cp -r static build/
-    fi
+          if [ -d "static" ]; then
+            cp -r static build/
+          fi
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
