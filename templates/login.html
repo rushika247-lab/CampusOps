@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:linear-gradient(135deg,#5c00ff,#7b4dff);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    display:flex;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    width:250px;
+    border-radius:15px;
+}
+
+h2{
+    text-align:center;
+    color:#5c00ff;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:#5c00ff;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Admin</h2>
+        <form action="/admin-login" method="POST">
+            <input name="username" placeholder="Username">
+            <input name="password" type="password" placeholder="Password">
+            <button>Login</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>Faculty</h2>
+        <form action="/faculty-login" method="POST">
+            <input name="username" placeholder="Username">
+            <input name="password" type="password" placeholder="Password">
+            <button>Login</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>Student</h2>
+        <form action="/student-login" method="POST">
+            <input name="username" placeholder="Username">
+            <input name="password" type="password" placeholder="Password">
+            <button>Login</button>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>

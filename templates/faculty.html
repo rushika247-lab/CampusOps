@@ -1,1 +1,188 @@
-<h1>Faculty Dashboard</h1>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Faculty Dashboard</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:#f4f6f9;
+}
+
+/* HEADER */
+.header{
+    background:linear-gradient(135deg,#5c00ff,#3a00cc);
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header h2{
+    margin:0;
+}
+
+/* CONTAINER */
+.container{
+    padding:20px;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+
+.card h2{
+    color:#5c00ff;
+    margin:0;
+}
+
+/* BUTTONS */
+.actions{
+    margin-top:20px;
+    display:flex;
+    gap:10px;
+}
+
+button{
+    padding:10px 15px;
+    background:#5c00ff;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#3a00cc;
+}
+
+/* TABLE BOX */
+.table-box{
+    margin-top:20px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#5c00ff;
+    color:white;
+    padding:10px;
+}
+
+td{
+    padding:10px;
+    border-bottom:1px solid #eee;
+}
+
+tr:hover{
+    background:#f1f1ff;
+}
+
+a{
+    color:white;
+    text-decoration:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <h2>Faculty Dashboard</h2>
+    <a href="/">Logout</a>
+</div>
+
+<div class="container">
+
+<!-- TOP STATS -->
+<div class="cards">
+
+    <div class="card">
+        <h2>250</h2>
+        <p>Total Students</p>
+    </div>
+
+    <div class="card">
+        <h2>15</h2>
+        <p>Assignments Given</p>
+    </div>
+
+    <div class="card">
+        <h2>8</h2>
+        <p>Courses</p>
+    </div>
+
+</div>
+
+<!-- ACTION BUTTONS -->
+<div class="actions">
+    <button onclick="alert('Add Assignment Coming Soon')">Add Assignment</button>
+    <button onclick="alert('Upload Marks Coming Soon')">Upload Marks</button>
+    <button onclick="alert('View Students Coming Soon')">View Students</button>
+</div>
+
+<!-- TABLE -->
+<div class="table-box">
+
+<h3>Recent Activities</h3>
+
+<table>
+<tr>
+    <th>Student</th>
+    <th>Assignment</th>
+    <th>Status</th>
+</tr>
+
+<tr>
+    <td>Rahul Sharma</td>
+    <td>Math Assignment</td>
+    <td>Submitted</td>
+</tr>
+
+<tr>
+    <td>Priya Patel</td>
+    <td>Physics Lab</td>
+    <td>Pending</td>
+</tr>
+
+<tr>
+    <td>Amit Kumar</td>
+    <td>Computer Project</td>
+    <td>Submitted</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+</body>
+</html>

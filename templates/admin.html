@@ -1,1 +1,339 @@
-<h1>Admin Dashboard</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CampusOps Admin</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body{
+    background:#f5f6fb;
+    display:flex;
+}
+
+/* LEFT SIDEBAR */
+.sidebar{
+    width:260px;
+    height:100vh;
+    background:linear-gradient(180deg,#6c3cff,#4b1fb8);
+    padding:20px;
+    color:white;
+    position:fixed;
+}
+
+.logo{
+    background:white;
+    color:#6c3cff;
+    padding:12px;
+    border-radius:12px;
+    font-weight:bold;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.menu a{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px;
+    margin:6px 0;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-size:14px;
+}
+
+.menu a:hover{
+    background:rgba(255,255,255,0.15);
+}
+
+.logout{
+    position:absolute;
+    bottom:20px;
+    width:220px;
+}
+
+/* MAIN */
+.main{
+    margin-left:260px;
+    width:100%;
+}
+
+/* TOP BAR */
+.topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 20px;
+    background:white;
+    border-bottom:1px solid #eee;
+}
+
+.menu-btn{
+    background:#6c3cff;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.search{
+    width:40%;
+    padding:10px 15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+.icons{
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+
+.icon{
+    width:35px;
+    height:35px;
+    background:#f2f2f2;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* CONTENT */
+.content{
+    padding:20px;
+}
+
+.title{
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+/* KNOWLEDGE CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.card{
+    background:white;
+    padding:18px;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+
+.card h2{
+    font-size:22px;
+}
+
+.card small{
+    color:gray;
+}
+
+.purple{background:#e9e3ff;}
+.orange{background:#ffe9d6;}
+.green{background:#e6ffe6;}
+.pink{background:#ffe6f0;}
+.blue{background:#e6f0ff;}
+.yellow{background:#fff6d6;}
+
+/* RIGHT SECTION */
+.grid{
+    display:flex;
+    gap:15px;
+}
+
+.left{
+    flex:2;
+}
+
+.right{
+    flex:1;
+}
+
+/* GRAPH BOX */
+.graph{
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    height:260px;
+}
+
+/* LIST BOX */
+.box{
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+
+.user{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:10px 0;
+}
+
+.user img{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <div class="logo">CampusOps</div>
+
+    <div class="menu">
+        <a href="#">🏠 Dashboard</a>
+        <a href="/students">👨‍🎓 Students</a>
+        <a href="/faculty">👨‍🏫 Faculty</a>
+        <a href="/courses">📚 Courses</a>
+        <a href="/attendance">📊 Attendance</a>
+        <a href="/settings">⚙ Settings</a>
+    </div>
+
+    <div class="logout">
+        <a href="/" style="color:white;text-decoration:none;">🚪 Logout</a>
+    </div>
+
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+
+        <button class="menu-btn">☰ Menu</button>
+
+        <input class="search" placeholder="Search item...">
+
+        <div class="icons">
+            <div class="icon">🔔</div>
+            <div class="icon">💬</div>
+            <div class="icon">📅</div>
+            <div class="icon">👤</div>
+        </div>
+
+    </div>
+
+    <div class="content">
+
+        <div class="title">Knowledge Base</div>
+
+        <!-- CARDS ROW 1 -->
+        <div class="cards">
+
+            <div class="card purple">
+                <h2>3,970</h2>
+                <small>Total Students</small>
+            </div>
+
+            <div class="card orange">
+                <h2>367</h2>
+                <small>Total Teachers</small>
+            </div>
+
+            <div class="card green">
+                <h2>367</h2>
+                <small>Financial Aid</small>
+            </div>
+
+        </div>
+
+        <!-- CARDS ROW 2 -->
+        <div class="cards">
+
+            <div class="card pink">
+                <h2>1283</h2>
+                <small>Total Invoices</small>
+            </div>
+
+            <div class="card blue">
+                <h2>97</h2>
+                <small>Sponsors</small>
+            </div>
+
+            <div class="card yellow">
+                <h2>267</h2>
+                <small>Courses</small>
+            </div>
+
+        </div>
+
+        <!-- LOWER SECTION -->
+        <div class="grid">
+
+            <!-- LEFT -->
+            <div class="left">
+
+                <div class="box">
+                    <h3>Statistics</h3>
+                    <p>Progress Score Graph Area</p>
+                </div>
+
+                <div class="graph"></div>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="right">
+
+                <div class="box">
+                    <h3>Top Students</h3>
+
+                    <div class="user">
+                        <img src="https://i.pravatar.cc/40?img=1">
+                        <div>Student 1</div>
+                    </div>
+
+                    <div class="user">
+                        <img src="https://i.pravatar.cc/40?img=2">
+                        <div>Student 2</div>
+                    </div>
+
+                </div>
+
+                <div class="box">
+                    <h3>Top Lecturers</h3>
+
+                    <div class="user">
+                        <img src="https://i.pravatar.cc/40?img=3">
+                        <div>Lecturer 1</div>
+                    </div>
+
+                    <div class="user">
+                        <img src="https://i.pravatar.cc/40?img=4">
+                        <div>Lecturer 2</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
