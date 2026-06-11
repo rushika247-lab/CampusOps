@@ -1,12 +1,12 @@
-name: Docker Release Pipeline
+name: CampusOps Release Automation
 
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - 'v*'
 
 jobs:
-  docker:
+  release:
     runs-on: ubuntu-latest
 
     permissions:
@@ -15,26 +15,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-
-      - name: Get Commit SHA
-        id: vars
-        run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
-
-      - name: Build Docker Image
-        run: |
-          docker build -t student-management:${{ github.ref_name }} .
-          docker tag student-management:${{ github.ref_name }} student-management:${{ steps.vars.outputs.sha_short }}
-
-      - name: Save Docker Image Artifact
-        run: |
-          docker save student-management:${{ github.ref_name }} -o student-management.tar
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: docker-image-${{ github.ref_name }}
-          path: student-management.tar
-          retention-days: 7
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2

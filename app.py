@@ -6,9 +6,18 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/about")
-def about():
-    return "<h1>About CampusOps</h1><p>College DevOps Automation Platform</p>"
+@app.route("/student")
+def student():
+    return render_template("student.html")
+
+@app.route("/faculty")
+def faculty():
+    return render_template("faculty.html")
+
+@app.route("/admin")
+def admin():
+    return render_template("admin.html")
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
