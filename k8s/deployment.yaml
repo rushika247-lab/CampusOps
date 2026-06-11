@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: campusops-deployment
+
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: campusops
+
+  template:
+    metadata:
+      labels:
+        app: campusops
+
+    spec:
+      containers:
+      - name: campusops
+        image: rushika2007/campusops:latest
+
+        ports:
+        - containerPort: 5000
