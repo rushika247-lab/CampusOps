@@ -56,31 +56,49 @@ def student_login():
     """
 
 
-# ---------------- ADMIN MENU PAGES ----------------
+# ---------------- REGISTER PAGES ----------------
+@app.route("/faculty-register")
+def faculty_register():
+    return render_template("faculty_register.html")
+
+
+@app.route("/student-register")
+def student_register():
+    return render_template("student_register.html")
+
+
+# ---------------- DASHBOARDS ----------------
 @app.route("/students")
 def students():
     return render_template("students.html")
 
 
-# ---------------- STUDENT DASHBOARD ----------------
+@app.route("/teachers")
+def teachers():
+    return "<h1>Teachers Page Coming Soon</h1>"
+
+
+@app.route("/courses")
+def courses():
+    return "<h1>Courses Page Coming Soon</h1>"
+
+
 @app.route("/student")
 def student_dashboard():
     return render_template("student_dashboard.html")
 
 
-# ---------------- FACULTY PAGE ----------------
 @app.route("/faculty")
 def faculty():
     return render_template("faculty.html")
 
 
-# ---------------- ADMIN PAGE ----------------
 @app.route("/admin")
 def admin():
     return render_template("admin.html")
 
 
-# ---------------- OTHER PAGES ----------------
+# ---------------- EXTRA PAGES ----------------
 @app.route("/attendance")
 def attendance():
     return "<h1>Attendance Page Coming Soon</h1>"
@@ -97,6 +115,6 @@ def logout():
     return render_template("login.html")
 
 
-# ---------------- RUN ----------------
+# ---------------- RUN APP ----------------
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)

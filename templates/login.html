@@ -1,70 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CampusOps Login</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
-
 body{
-    min-height:100vh;
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#7b2ff7,#5c00ff);
+    height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(135deg,#6c3cff,#4b1fb8);
 }
 
 .container{
-    width:1100px;
     display:flex;
-    gap:25px;
-    justify-content:center;
-    align-items:center;
+    gap:30px;
 }
 
 .card{
     background:white;
-    width:320px;
+    width:300px;
     padding:30px;
-    border-radius:25px;
-    box-shadow:0 15px 40px rgba(0,0,0,0.15);
-    transition:.3s;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    transition:0.3s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-5px);
 }
 
-.logo{
-    width:80px;
-    height:80px;
-    margin:auto;
-    background:#f4efff;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:35px;
-    margin-bottom:15px;
-}
-
-h2{
+.card h2{
     text-align:center;
-    color:#4b1fb8;
-    margin-bottom:5px;
-}
-
-.role{
-    text-align:center;
-    color:gray;
+    color:#5c00ff;
     margin-bottom:20px;
 }
 
@@ -74,96 +47,106 @@ input{
     margin:8px 0;
     border:1px solid #ddd;
     border-radius:10px;
+    box-sizing:border-box;
     outline:none;
 }
 
 input:focus{
-    border-color:#6c3cff;
+    border-color:#5c00ff;
 }
 
-button{
+.login-btn{
     width:100%;
     padding:12px;
+    background:#5c00ff;
+    color:white;
     border:none;
     border-radius:10px;
-    background:#6c3cff;
-    color:white;
-    font-size:15px;
     cursor:pointer;
+    font-size:15px;
     margin-top:10px;
 }
 
-button:hover{
-    background:#4b1fb8;
+.login-btn:hover{
+    background:#3a00cc;
 }
 
-.header{
-    position:absolute;
-    top:40px;
+.register-btn{
+    display:block;
     text-align:center;
+    margin-top:12px;
+    padding:12px;
+    background:#eee5ff;
+    color:#5c00ff;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.register-btn:hover{
+    background:#5c00ff;
     color:white;
-}
-
-.header h1{
-    font-size:42px;
-}
-
-.header p{
-    font-size:18px;
-    opacity:.9;
 }
 
 </style>
 </head>
-<body>
 
-<div class="header">
-    <h1>🎓 CampusOps</h1>
-    <p>Higher Learning Management System</p>
-</div>
+<body>
 
 <div class="container">
 
     <!-- ADMIN -->
     <div class="card">
-        <div class="logo">👨‍💼</div>
-        <h2>Admin Login</h2>
-        <p class="role">Dashboard Access</p>
+        <h2>Admin</h2>
 
         <form action="/admin-login" method="POST">
             <input type="text" name="username" placeholder="Username" required>
+
             <input type="password" name="password" placeholder="Password" required>
 
-            <button type="submit">Login as Admin</button>
+            <button type="submit" class="login-btn">
+                Login
+            </button>
         </form>
     </div>
 
     <!-- FACULTY -->
     <div class="card">
-        <div class="logo">👨‍🏫</div>
-        <h2>Faculty Login</h2>
-        <p class="role">Teaching Portal</p>
+        <h2>Faculty</h2>
 
         <form action="/faculty-login" method="POST">
             <input type="text" name="username" placeholder="Username" required>
+
             <input type="password" name="password" placeholder="Password" required>
 
-            <button type="submit">Login as Faculty</button>
+            <button type="submit" class="login-btn">
+                Login
+            </button>
         </form>
+
+        <a href="/faculty-register" class="register-btn">
+            Register New Faculty
+        </a>
     </div>
 
     <!-- STUDENT -->
     <div class="card">
-        <div class="logo">👨‍🎓</div>
-        <h2>Student Login</h2>
-        <p class="role">Student Portal</p>
+        <h2>Student</h2>
 
         <form action="/student-login" method="POST">
             <input type="text" name="username" placeholder="Username" required>
+
             <input type="password" name="password" placeholder="Password" required>
 
-            <button type="submit">Login as Student</button>
+            <button type="submit" class="login-btn">
+                Login
+            </button>
         </form>
+
+        <a href="/student-register" class="register-btn">
+            Register New Student
+        </a>
     </div>
 
 </div>
