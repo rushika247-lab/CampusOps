@@ -39,43 +39,65 @@
             MAIN MENU
         </div>
 
-        <ul class="menu">
+       <ul class="menu">
 
-            <li class="active">
-                <i class="bi bi-grid-fill"></i>
-                Dashboard
-            </li>
+    <li>
+        <a href="/" class="menu-link active">
+            <i class="bi bi-grid-fill"></i>
+            Dashboard
+        </a>
+    </li>
 
-    <a href="/student" class="menu-item active">
-    <i class="fas fa-user-graduate"></i>
-    <span>Student</span>
-</a>
-            <li>
-                <i class="bi bi-person-workspace"></i>
-                Faculty
-            </li>
+    <li>
+        <a href="/student" class="menu-link">
+            <i class="bi bi-mortarboard-fill"></i>
+            Student
+        </a>
+    </li>
 
-            <li>
-                <i class="bi bi-journal-bookmark-fill"></i>
-                Assignments
-            </li>
+    <li>
+        <a href="/faculty" class="menu-link">
+            <i class="bi bi-person-workspace"></i>
+            Faculty
+        </a>
+    </li>
 
-            <li>
-                <i class="bi bi-briefcase-fill"></i>
-                Placements
-            </li>
+    <li>
+        <a href="/admin" class="menu-link">
+            <i class="bi bi-person-fill-gear"></i>
+            Admin
+        </a>
+    </li>
 
-            <li>
-                <i class="bi bi-cpu-fill"></i>
-                CI/CD Status
-            </li>
+    <li>
+        <a href="#" class="menu-link">
+            <i class="bi bi-journal-bookmark-fill"></i>
+            Assignments
+        </a>
+    </li>
 
-            <li>
-                <i class="bi bi-gear-fill"></i>
-                Settings
-            </li>
-        </ul>
+    <li>
+        <a href="#" class="menu-link">
+            <i class="bi bi-briefcase-fill"></i>
+            Placements
+        </a>
+    </li>
 
+    <li>
+        <a href="#" class="menu-link">
+            <i class="bi bi-cpu-fill"></i>
+            CI/CD Status
+        </a>
+    </li>
+
+    <li>
+        <a href="#" class="menu-link">
+            <i class="bi bi-gear-fill"></i>
+            Settings
+        </a>
+    </li>
+
+</ul>
         <button class="logout-btn">
             <i class="bi bi-box-arrow-right"></i>
             Logout
@@ -102,7 +124,9 @@
                 <img src="https://i.pravatar.cc/50" alt="">
                 <div>
                     <h6>Rushika Gaikwad</h6>
-                    <p>Admin</p>
+                    <a href="/admin" class="menu-item">
+    Admin
+</a>
                 </div>
             </div>
 

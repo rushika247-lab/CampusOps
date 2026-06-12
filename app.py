@@ -62,20 +62,25 @@ def students():
     return render_template("students.html")
 
 
-@app.route('/student')
+# ---------------- STUDENT DASHBOARD ----------------
+@app.route("/student")
 def student_dashboard():
-    return render_template('student_dashboard.html')
+    return render_template("student_dashboard.html")
 
+
+# ---------------- FACULTY PAGE ----------------
 @app.route("/faculty")
 def faculty():
     return render_template("faculty.html")
 
 
-@app.route("/courses")
-def courses():
-    return "<h1>Courses Page Coming Soon</h1>"
+# ---------------- ADMIN PAGE ----------------
+@app.route("/admin")
+def admin():
+    return render_template("admin.html")
 
 
+# ---------------- OTHER PAGES ----------------
 @app.route("/attendance")
 def attendance():
     return "<h1>Attendance Page Coming Soon</h1>"
