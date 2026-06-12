@@ -62,6 +62,10 @@ def students():
     return render_template("students.html")
 
 
+@app.route('/student')
+def student_dashboard():
+    return render_template('student_dashboard.html')
+
 @app.route("/faculty")
 def faculty():
     return render_template("faculty.html")

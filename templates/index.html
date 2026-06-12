@@ -46,13 +46,10 @@
                 Dashboard
             </li>
 
-          <a href="/student" class="menu-link">
-    <li>
-        <i class="bi bi-people-fill"></i>
-        Students
-    </li>
+    <a href="/student" class="menu-item active">
+    <i class="fas fa-user-graduate"></i>
+    <span>Student</span>
 </a>
-
             <li>
                 <i class="bi bi-person-workspace"></i>
                 Faculty
@@ -144,9 +141,9 @@
             <div class="analytics">
                 <h4>CI/CD Analytics</h4>
 
-                <div class="graph-placeholder">
-                    📈 CI/CD Monitoring Chart
-                </div>
+               <div class="chart-container">
+    <canvas id="cicdChart"></canvas>
+</div>
             </div>
 
             <div class="top-students">
@@ -170,6 +167,9 @@
 
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='js/chart.js') }}"></script>
 
 </body>
 </html>
