@@ -1,82 +1,168 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CampusOps Login</title>
 
 <style>
-body{
+
+*{
     margin:0;
-    font-family:Arial;
-    background:linear-gradient(135deg,#5c00ff,#7b4dff);
-    height:100vh;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
     display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#6c3cff,#4b1fb8);
+}
+
+.container{
+    width:1100px;
+    display:flex;
+    gap:25px;
     justify-content:center;
     align-items:center;
 }
 
-.container{
-    display:flex;
-    gap:20px;
-}
-
 .card{
     background:white;
-    padding:25px;
-    width:250px;
-    border-radius:15px;
+    width:320px;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.logo{
+    width:80px;
+    height:80px;
+    margin:auto;
+    background:#f4efff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:35px;
+    margin-bottom:15px;
 }
 
 h2{
     text-align:center;
-    color:#5c00ff;
+    color:#4b1fb8;
+    margin-bottom:5px;
+}
+
+.role{
+    text-align:center;
+    color:gray;
+    margin-bottom:20px;
 }
 
 input{
     width:100%;
-    padding:10px;
+    padding:12px;
     margin:8px 0;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+}
+
+input:focus{
+    border-color:#6c3cff;
 }
 
 button{
     width:100%;
-    padding:10px;
-    background:#5c00ff;
-    color:white;
+    padding:12px;
     border:none;
+    border-radius:10px;
+    background:#6c3cff;
+    color:white;
+    font-size:15px;
     cursor:pointer;
+    margin-top:10px;
 }
+
+button:hover{
+    background:#4b1fb8;
+}
+
+.header{
+    position:absolute;
+    top:40px;
+    text-align:center;
+    color:white;
+}
+
+.header h1{
+    font-size:42px;
+}
+
+.header p{
+    font-size:18px;
+    opacity:.9;
+}
+
 </style>
-
 </head>
-
 <body>
+
+<div class="header">
+    <h1>🎓 CampusOps</h1>
+    <p>Higher Learning Management System</p>
+</div>
 
 <div class="container">
 
+    <!-- ADMIN -->
     <div class="card">
-        <h2>Admin</h2>
+        <div class="logo">👨‍💼</div>
+        <h2>Admin Login</h2>
+        <p class="role">Dashboard Access</p>
+
         <form action="/admin-login" method="POST">
-            <input name="username" placeholder="Username">
-            <input name="password" type="password" placeholder="Password">
-            <button>Login</button>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+
+            <button type="submit">Login as Admin</button>
         </form>
     </div>
 
+    <!-- FACULTY -->
     <div class="card">
-        <h2>Faculty</h2>
+        <div class="logo">👨‍🏫</div>
+        <h2>Faculty Login</h2>
+        <p class="role">Teaching Portal</p>
+
         <form action="/faculty-login" method="POST">
-            <input name="username" placeholder="Username">
-            <input name="password" type="password" placeholder="Password">
-            <button>Login</button>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+
+            <button type="submit">Login as Faculty</button>
         </form>
     </div>
 
+    <!-- STUDENT -->
     <div class="card">
-        <h2>Student</h2>
+        <div class="logo">👨‍🎓</div>
+        <h2>Student Login</h2>
+        <p class="role">Student Portal</p>
+
         <form action="/student-login" method="POST">
-            <input name="username" placeholder="Username">
-            <input name="password" type="password" placeholder="Password">
-            <button>Login</button>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+
+            <button type="submit">Login as Student</button>
         </form>
     </div>
 
